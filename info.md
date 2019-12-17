@@ -5,8 +5,6 @@ This component can read values from and control Plugwise circles and plugs.
 
 ## Home-Assistant Custom Component
 This is a Custom Component for Home-Assistant (https://home-assistant.io)
-
-Note:
 Although it works rather well, it is still work in progress, it uses the older python-plugwise code.
 And it must be made async so it plays nice when it cannot reach a plug it queries resulting in timeouts.
 
