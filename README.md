@@ -52,7 +52,7 @@ If you want to graph power consumption values you can convert the attribute of t
 NOTE: works in Hass.io
 
 ### Changes
-first release for hacs
+* first release for hacs
 
 ### Screenshots
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switches.png?raw=true "Screenshot Plugwise Switches")
