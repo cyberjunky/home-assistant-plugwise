@@ -9,14 +9,12 @@ Although it works rather well, it is still work in progress, it uses the older p
 And it must be made async so it plays nice when it cannot reach a plug it queries resulting in timeouts.
 
 {% if not installed %}
-
 ### Installation
 
 - Copy directory `custom-components/plugwise` to your `<config dir>/custom-components` directory.
 - It has as dependency the 'plugwise' module from PyPi, but it will be installed automatically.
 - Configure with config below.
 - Restart Home-Assistant.
-
 {% endif %}
 
 ### Usage
