@@ -1,7 +1,7 @@
 {
   "domain": "plugwise",
   "name": "Plugwise",
-  "documentation": "https://github.com/cyberjunky/home-assistant-custom-components/tree/master/plugwise",
+  "documentation": "https://github.com/cyberjunky/home-assistant-plugwise",
   "dependencies": [],
   "codeowners": [
     "@cyberjunky"
