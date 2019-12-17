@@ -1,0 +1,6 @@
+{
+  "name": "Plugwise",
+  "country": "NL",
+  "render_readme": false,
+  "domains": ["switch","sensor"]
+}
