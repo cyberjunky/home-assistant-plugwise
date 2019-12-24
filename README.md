@@ -12,6 +12,13 @@ And it must be made async so it plays nice when it cannot reach a plug it querie
 
 ### Installation
 
+## HACS - Recommended
+- Have [HACS](https://hacs.xyz) installed, this will allow you to easily update.
+- Add `https://github.com/cyberjunky/home-assistant-plugwise` as a [custom repository](https://hacs.xyz/docs/navigation/repository) with Type: Integration
+- Click Install under "Plugwise" integration.
+- Restart Home-Assistant.
+
+## Manual
 - Copy directory `plugwise` to your `<config dir>/custom-components` directory.
 - It has as dependency the 'plugwise' module from PyPi, but it will be installed automatically.
 - Configure with config below.
