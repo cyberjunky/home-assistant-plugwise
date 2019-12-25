@@ -1,20 +1,14 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)  [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)  [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
 
 # Plugwise Component
-This component can read values from and control Plugwise circles and plugs.
-
-## Home-Assistant Custom Component
-This is a Custom Component for Home-Assistant (https://home-assistant.io)
-Although it works rather well, it is still work in progress, it uses the older python-plugwise code.
-And it must be made async so it plays nice when it cannot reach a plug it queries resulting in timeouts.
+This is a Custom Component for Home-Assistant (https://home-assistant.io), it can read values from and control Plugwise circles and plugs.
 
 {% if not installed %}
 
 ### Installation
 
-- Copy directory `custom-components/plugwise` to your `<config dir>/custom-components` directory.
-- It has as dependency the 'plugwise' module from PyPi, but it will be installed automatically.
-- Configure with config below.
+- Install this integration using HACS.
+- Configure using the configuration instuctions below.
 - Restart Home-Assistant.
 
 {% endif %}
@@ -57,9 +51,6 @@ NOTE: works in Hass.io
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switches.png?raw=true "Screenshot Plugwise Switches")
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switch.png?raw=true  "Screenshot Plugwise Switch")
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-graph.png?raw=true  "Screenshot Plugwise Graph")
-
-### Changes
-* first release for hacs
 
 ### Donation
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
