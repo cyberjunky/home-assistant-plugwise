@@ -18,7 +18,7 @@ This is a Custom Component for Home-Assistant (https://home-assistant.io), it ca
 - Configure with config below.
 - Restart Home-Assistant.
 
-### Usage
+## Usage
 To use this component in your installation, add the following to your `configuration.yaml` file:
 
 ```yaml
@@ -52,13 +52,10 @@ If you want to graph power consumption values you can convert the attribute of t
 ```
 NOTE: works in Hass.io
 
-### Changes
-* first release for hacs
-
-### Screenshots
+## Screenshots
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switches.png?raw=true "Screenshot Plugwise Switches")
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switch.png?raw=true  "Screenshot Plugwise Switch")
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-graph.png?raw=true  "Screenshot Plugwise Graph")
 
-### Donation
+## Donation
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
