@@ -1,24 +1,18 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)  [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)  [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
 
 # Plugwise Component
-This component can read values from and control Plugwise circles and plugs.
+This is a Custom Component for Home-Assistant (https://home-assistant.io), it can read values from and control Plugwise circles and plugs.
 
-## Home-Assistant Custom Component
-This is a Custom Component for Home-Assistant (https://home-assistant.io)
+## Installation
 
-Note:
-Although it works rather well, it is still work in progress, it uses the older python-plugwise code.
-And it must be made async so it plays nice when it cannot reach a plug it queries resulting in timeouts.
-
-### Installation
-
-## HACS - Recommended
-- Have [HACS](https://hacs.xyz) installed, this will allow you to easily update.
-- Add `https://github.com/cyberjunky/home-assistant-plugwise` as a [custom repository](https://hacs.xyz/docs/navigation/repository) with Type: Integration
-- Click Install under "Plugwise" integration.
+### HACS - Recommended
+- Have [HACS](https://hacs.xyz) installed, this will allow you to easily manage and track updates.
+- Search for 'Plugwise'.
+- Click Install below the found integration.
+- Configure using the configuration instuctions below.
 - Restart Home-Assistant.
 
-## Manual
+### Manual
 - Copy directory `plugwise` to your `<config dir>/custom-components` directory.
 - It has as dependency the 'plugwise' module from PyPi, but it will be installed automatically.
 - Configure with config below.
