@@ -5,7 +5,7 @@ This is a Custom Component for Home-Assistant (https://home-assistant.io), it ca
 
 {% if not installed %}
 
-### Installation
+## Installation
 
 - Install this integration using HACS.
 - Configure using the configuration instuctions below.
@@ -13,7 +13,7 @@ This is a Custom Component for Home-Assistant (https://home-assistant.io), it ca
 
 {% endif %}
 
-### Usage
+## Usage
 To use this component in your installation, add the following to your `configuration.yaml` file:
 
 ```yaml
@@ -47,10 +47,10 @@ If you want to graph power consumption values you can convert the attribute of t
 ```
 NOTE: works in Hass.io
 
-### Screenshots
+## Screenshots
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switches.png?raw=true "Screenshot Plugwise Switches")
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-switch.png?raw=true  "Screenshot Plugwise Switch")
 ![alt tag](https://github.com/cyberjunky/home-assistant-plugwise/blob/master/screenshots/plugwise-graph.png?raw=true  "Screenshot Plugwise Graph")
 
-### Donation
+## Donation
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
