@@ -8,11 +8,15 @@ import logging
 import voluptuous as vol
 import plugwise
 
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
 from homeassistant.const import (CONF_PORT)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.const import STATE_UNKNOWN
 from serial.serialutil import SerialException
+
+try:
+    from homeassistant.components.switch import (SwitchEntity, PLATFORM_SCHEMA)
+except ImportError:
+    from homeassistant.components.switch import (SwitchDevice as SwitchEntity, PLATFORM_SCHEMA)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -49,7 +53,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
         _LOGGER.info("Created Plugwise switch for Circle: %s", name)
 
 
-class PlugwiseSwitch(SwitchDevice):
+class PlugwiseSwitch(SwitchEntity):
     """Representation of a plugwise switch."""
 
     def __init__(self, hass, data, name):
