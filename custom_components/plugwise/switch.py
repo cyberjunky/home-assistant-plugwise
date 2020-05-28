@@ -7,6 +7,7 @@ https://home-assistant.io/components/switch.plugwise/
 import logging
 import voluptuous as vol
 import plugwise
+from plugwise import TimeoutException
 
 from homeassistant.const import (CONF_PORT)
 import homeassistant.helpers.config_validation as cv
@@ -42,8 +43,11 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     try:
         stick = plugwise.Stick(config.get(CONF_PORT))
         _LOGGER.info("Connected to Plugwise stick")
-    except (TimeoutException, SerialException) as reason:
-        _LOGGER.error("Error: %s" % (reason,))
+    except (TimeoutException):
+        _LOGGER.error("Timeout occured while connecting to Plugwise stick")
+        return
+    except Exception as err:
+        _LOGGER.error("Unknown error occured while connecting to Plugwise stick: %s" % err)
         return
 
     # Add all circles to hass
@@ -113,34 +117,38 @@ class PlugwiseSwitchData(object):
 
     def __init__(self, stick, mac):
         """Initialize the data object."""
-        self.mac = mac
-        self.stick = stick
         self.getinfo = None
         self.fwversion = None
         self.datetime = None
         self.state = STATE_UNKNOWN
         self.current_consumption = STATE_UNKNOWN
 
+        self._circle = plugwise.Circle(mac, stick)
+
     def update(self):
         """Get the latest data from the plugwise circles."""
-        import plugwise
 
-        self.current_consumption = plugwise.Circle(self.mac, self.stick).get_power_usage()
-        _LOGGER.debug("Current Consumption: %s", self.current_consumption)
+        try:
+            self.getinfo = self._circle.get_info()
+            self.current_consumption = self._circle.get_power_usage()
+        except (TimeoutException):
+            _LOGGER.error("Timeout occured while getting data from circle")
+            return
+        except Exception as err:
+            _LOGGER.error("Unknown error occured while getting data from circle: %s" % err)
+            return
 
-        self.getinfo = plugwise.Circle(self.mac, self.stick).get_info()
         self.state = self.getinfo['relay_state']
         self.fwversion = self.getinfo['fw_ver']
         self.datetime = self.getinfo['datetime']
+        _LOGGER.debug("Current Consumption: %s", self.current_consumption)
         _LOGGER.debug("Relay State: %s", self.state)
         return
 
     def switch_on(self):
         """Turn the switch on."""
-        import plugwise
-        plugwise.Circle(self.mac, self.stick).switch_on()
+        self._circle.switch_on()
 
     def switch_off(self):
         """Turn the switch off."""
-        import plugwise
-        plugwise.Circle(self.mac, self.stick).switch_off()
+        self._circle.switch_off()
