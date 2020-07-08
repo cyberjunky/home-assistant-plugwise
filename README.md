@@ -13,7 +13,7 @@ This is a Custom Component for Home-Assistant (https://home-assistant.io), it ca
 - Restart Home-Assistant.
 
 ### Manual
-- Copy directory `plugwise` to your `<config dir>/custom-components` directory.
+- Copy directory `plugwise` to your `<config dir>/custom_components` directory.
 - It has as dependency the 'plugwise' module from PyPi, but it will be installed automatically.
 - Configure with config below.
 - Restart Home-Assistant.
